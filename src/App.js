@@ -10,6 +10,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Categories from "./Components/Categories";
 import Subscribe from "./Components/Subscribe";
+import ArticleDetails from "./Components/ArticleDetails";
 import "./App.css";
 
 export default function App() {
@@ -31,7 +32,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/contact" element={<Contact />} />
-              <Route path="/subscribe" element={<Subscribe />} />
+          <Route path="/subscribe" element={<Subscribe />} />
+          <Route path="/article" element={<ArticleDetails />} />
 
         </Routes>
       </div>
