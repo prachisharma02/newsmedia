@@ -20,18 +20,7 @@ export default function Subscribe() {
 
         {step === 1 && (
           <>
-            <h2>Unlock Premium News</h2>
-            <p>Get unlimited access to all articles</p>
-
-            <button onClick={() => setStep(2)}>
-              Subscribe Now
-            </button>
-          </>
-        )}
-
-        {step === 2 && (
-          <>
-            <h2>Enter Your Email</h2>
+           <h2>Enter Your Email</h2>
 
             <input
               type="email"
@@ -46,9 +35,9 @@ export default function Subscribe() {
           </>
         )}
 
-        {step === 3 && (
+        {step === 2 && (
           <>
-            <h2>Select a Plan</h2>
+           <h2>Select a Plan</h2>
 
             <div className="plans">
               <button onClick={() => setStep(4)}>Monthly - ₹99</button>
@@ -57,18 +46,18 @@ export default function Subscribe() {
           </>
         )}
 
-        {step === 4 && (
+        {step === 3 && (
           <>
-            <h2>You're Almost There</h2>
+           <h2>You're Almost There</h2>
             <p>Welcome, {email}</p>
 
-            <button onClick={() => setStep(5)}>
+            <button onClick={() => setStep(4)}>
               Complete Subscription
             </button>
           </>
         )}
 
-        {step === 5 && (
+        {step === 4 && (
           <>
             <h2>🎉 Thank You!</h2>
             <p>You have successfully subscribed.</p>
@@ -79,6 +68,8 @@ export default function Subscribe() {
             </button>
           </>
         )}
+
+       
 
       </div>
     </div>
