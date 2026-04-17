@@ -3,7 +3,7 @@ export default function About() {
     <div className="about">
       <h1>About Us</h1>
       <p>
-        Daily Pulse News is a modern digital news platform delivering fast,
+        NewsDeck is a modern digital news platform delivering fast,
         reliable, and insightful updates across technology, global markets,
         and environment.
       </p>

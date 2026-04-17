@@ -1,47 +1,22 @@
 import { useNavigate } from "react-router-dom";
-
+import newsbanner from "../assests/news1.png";
 export default function Home() {
     const navigate = useNavigate();
 
 
-    // const newsArticles = [
-    //     {
-    //         id: 1,
-    //         title: "Global Markets See Major Shift",
-    //         description: "Stock markets around the world are experiencing significant changes.",
-    //         content: "Global markets are undergoing a major transformation due to inflation trends, geopolitical tensions, and shifts in investor sentiment. Experts suggest diversification is key during this phase.",
-    //         Category: "Markets"
-    //     },
-    //     {
-    //         id: 2,
-    //         title: "Tech Innovation Trends in 2026",
-    //         description: "AI and automation continue to dominate the technology landscape.",
-    //         content: "Artificial Intelligence is evolving rapidly with advancements in generative AI, robotics, and automation tools. Companies are investing heavily in AI-driven solutions to increase efficiency.",
-    //         Category: "Technology"
-    //     },
-    //     {
-    //         id: 3,
-    //         title: "Climate Change Updates Today",
-    //         description: "Governments are accelerating climate initiatives.",
-    //         content: "Nations worldwide are committing to stricter environmental policies. Renewable energy adoption and carbon neutrality goals are at the center of global climate strategies.",
-    //         Category: "Environment"
-    //     },
-    // ];
-
-    //   const handleSubscribe = () => {
-    //     if (email.trim()) {
-    //       setSubscribed(true);
-    //       setEmail("");
-    //     }
-    //   };
+    
 
     return (
         <>
-            <header className="header">
-                <h1>Daily Pulse News</h1>
+           
+<div className="hero-banner">
+    <img src={newsbanner} alt="news banner" />
+
+</div>
+ <header className="header">
+                <h1>NewsDeck</h1>
                 <p>Your trusted source for latest updates</p>
             </header>
-
          <section className="news-grid">
 
                 {/* CARD 1 - MARKETS */}

@@ -18,7 +18,7 @@ export default function App() {
     <BrowserRouter>
       <div className="container">
         <nav className="navbar">
-          <h2>Daily Pulse</h2>
+          <h2>NewsDeck</h2>
           <div>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
