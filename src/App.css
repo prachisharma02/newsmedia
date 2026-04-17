@@ -1,12 +1,21 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
+    overflow-x: hidden; /* removes horizontal scroll */
+
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 /* ================= CONTAINER ================= */
 .container {
   min-height: 100vh;
-  padding: 20px;
+  padding: 16px; /* reduced from 20px */
   background: linear-gradient(135deg, #eef2ff, #d9e4ff);
 }
 
@@ -15,9 +24,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px;
+  flex-wrap: wrap; /* important */
+  padding: 15px 20px;
   margin-bottom: 30px;
-
   background: rgba(255, 255, 255, 0.9);
   border-radius: 14px;
   backdrop-filter: blur(10px);
@@ -76,8 +85,8 @@ body {
   background: linear-gradient(135deg, #ffffff, #eef1ff);
   border-radius: 18px;
   padding: 20px;
-  width: 300px;
-
+width: 100%;
+  max-width: 300px; /* instead of fixed width */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
 }
@@ -166,4 +175,122 @@ body {
   text-align: center;
   margin-top: 50px;
   color: #333;
+}
+/* Page Title */
+.page-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* Category Section */
+.category-section {
+  margin-bottom: 50px;
+}
+
+/* Category Heading */
+.category-title {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Card Upgrade */
+.fancy-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Category Tag */
+.tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+/* Better Hover Effect */
+.fancy-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Grid spacing fix */
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/* Clickable heading */
+.clickable {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clickable:hover {
+  color: #6a5cff;
+}
+
+/* Hidden by default */
+.news-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* Show with animation */
+.news-wrapper.show {
+  max-height: 1000px;
+  margin-top: 20px;
+}
+
+/* Smooth fade */
+.news-wrapper .card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s ease;
+}
+
+.news-wrapper.show .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar a {
+    margin: 5px 10px 0 0;
+  }
+
+  .header {
+    margin-top: 0; /* remove negative margin on mobile */
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .news-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .container {
+    padding: 12px;
+  }
 }
