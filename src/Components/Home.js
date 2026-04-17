@@ -94,7 +94,7 @@ export default function Home() {
                 <h2>Unlock Premium News</h2>
                 <p>Get unlimited access to all articles</p>
 
-                <button onClick={() => navigate("/subscribe")}>
+                <button id="subscribe-btn" onClick={() => navigate("/subscribe")}>
                     Subscribe Now
                 </button>
 

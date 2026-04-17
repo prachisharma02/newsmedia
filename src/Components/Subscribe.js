@@ -11,7 +11,7 @@ export default function Subscribe() {
       alert("Please enter your email");
       return;
     }
-    setStep(3);
+    setStep(2);
   };
 
   return (
@@ -29,7 +29,7 @@ export default function Subscribe() {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <button onClick={handleEmailNext}>
+            <button id="continue" onClick={handleEmailNext}>
               Continue
             </button>
           </>
@@ -40,9 +40,11 @@ export default function Subscribe() {
            <h2>Select a Plan</h2>
 
             <div className="plans">
-              <button onClick={() => setStep(4)}>Monthly - ₹99</button>
-              <button onClick={() => setStep(4)}>Yearly - ₹999</button>
+              <button onClick={() => setStep(3)}>Monthly - ₹99</button>
+              <button onClick={() => setStep(3)}>Yearly - ₹999</button>
             </div>
+
+            
           </>
         )}
 
