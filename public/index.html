@@ -33,10 +33,10 @@
   }
    document.addEventListener("DOMContentLoaded", function () {
     adobe.target.getOffer({
-      mbox: "target-custom-mbox",
+      mbox: "target-prachips-mbox",
       success: function (offers) {
         adobe.target.applyOffer({
-          mbox: "target-custom-mbox",
+          mbox: "target-prachips-mbox",
           selector: "#target-project",
           offer: offers
         });
