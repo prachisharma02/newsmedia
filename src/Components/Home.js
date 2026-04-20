@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import newsbanner from "../assests/news1.png";
-import offers from "../assests/pngtree-special-offer-tag-shape-free-vector-png-image_9173639.png";
 export default function Home() {
     const navigate = useNavigate();
 
@@ -90,9 +89,8 @@ export default function Home() {
                 </div>
 
             </section>
-         
-                <img id="target-project" class="mboxDefault" src={offers} alt="news banner" />   
-            
+            <div id="target-project" class="mboxDefault">
+            </div>
 
             <div className="subscribe-box">
 
