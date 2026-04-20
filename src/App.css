@@ -12,7 +12,7 @@ img {
   height: auto;
   display: block;
 }
-#target-project img{
+#target-project {
    width: 20%;
   height: 20%;
   object-fit: cover;

@@ -90,9 +90,9 @@ export default function Home() {
                 </div>
 
             </section>
-            <div id="target-project" class="mboxDefault">
-                <img src={offers} alt="news banner" />   
-            </div>
+         
+                <img id="target-project" class="mboxDefault" src={offers} alt="news banner" />   
+            
 
             <div className="subscribe-box">
 
