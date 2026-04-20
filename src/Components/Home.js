@@ -1,23 +1,24 @@
 import { useNavigate } from "react-router-dom";
 import newsbanner from "../assests/news1.png";
+import offers from "../assests/pngtree-special-offer-tag-shape-free-vector-png-image_9173639.png";
 export default function Home() {
     const navigate = useNavigate();
 
 
-    
+
 
     return (
         <>
-           
-<div className="hero-banner">
-    <img src={newsbanner} alt="news banner" />
 
-</div>
- <header className="header">
+            <div className="hero-banner">
+                <img src={newsbanner} alt="news banner" />
+
+            </div>
+            <header className="header">
                 <h1>NewsDeck</h1>
                 <p>Your trusted source for latest updates</p>
             </header>
-         <section className="news-grid">
+            <section className="news-grid">
 
                 {/* CARD 1 - MARKETS */}
                 <div className="card">
@@ -89,6 +90,10 @@ export default function Home() {
                 </div>
 
             </section>
+            <div id="target-project" class="mboxDefault">
+                <img src={offers} alt="news banner" />   
+            </div>
+
             <div className="subscribe-box">
 
                 <h2>Unlock Premium News</h2>

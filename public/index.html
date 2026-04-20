@@ -31,6 +31,22 @@
       "at_property": "e4696173-c6e4-4012-eafd-ebc74eb7ab1c"
     };
   }
+   document.addEventListener("DOMContentLoaded", function () {
+    adobe.target.getOffer({
+      mbox: "prachips-mbox",
+      success: function (offers) {
+        adobe.target.applyOffer({
+          mbox: "target-custom-mbox",
+          selector: "#target-project",
+          offer: offers
+        });
+      },
+      error: function (status, error) {
+        console.error("Custom mbox failed:", status, error);
+      }
+    });
+  });
+  </script>
 </script>
     <script src="https://assets.adobedtm.com/6a203c8a0ff8/e35d779b6e65/launch-70904cc7e71c-development.min.js" async></script>
   </head>

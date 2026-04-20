@@ -12,6 +12,12 @@ img {
   height: auto;
   display: block;
 }
+#target-project img{
+   width: 20%;
+  height: 20%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto; /* centers the image */}
 /* ================= CONTAINER ================= */
 .container {
   min-height: 100vh;
