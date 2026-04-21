@@ -3,166 +3,72 @@ import { useState } from "react";
 export default function Categories() {
   const [activeIndexes, setActiveIndexes] = useState([]);
 
- const handleClick = (index) => {
-  if (activeIndexes.includes(index)) {
-    setActiveIndexes(activeIndexes.filter(i => i !== index));
-  } else {
-    setActiveIndexes([...activeIndexes, index]);
-  }
-};
-  const categories = [
-  {
-    name: "Stock Market",
-    news: [
-      {
-        title: "Sensex hits record high",
-        desc: "Markets surged due to strong quarterly earnings across sectors."
-      },
-      {
-        title: "Nifty crosses 20,000 mark",
-        desc: "Benchmark index reaches new milestone driven by IT stocks."
-      },
-      {
-        title: "Global markets react to inflation",
-        desc: "US inflation data impacts trading across global markets."
-      },
-      {
-        title: "Adani stocks recover",
-        desc: "Major gains seen after recent losses in Adani group shares."
-      },
-      {
+  const handleClick = (index) => {
+    if (activeIndexes.includes(index)) {
+      setActiveIndexes(activeIndexes.filter(i => i !== index));
+    } else {
+      setActiveIndexes([...activeIndexes, index]);
+    }
+  };
 
-        title: "Banking sector leads rally",
-        desc: "Private banks show strong performance boosting indices."
-      },
-      {
-
-        title: "IPO market heats up",
-        desc: "Several companies plan public offerings this quarter."
-      },
-      {
-
-        title: "Rupee weakens",
-        desc: "Indian currency falls against US dollar amid global pressure."
-      },
-      { 
-
-        title: "Oil prices impact stocks",
-        desc: "Rising crude prices influence market sentiment."
-      }
-    ]
-  },
-  {
-    name: "Technology",
-    news: [
-      {
-        title: "AI reshaping industries",
-        desc: "Artificial Intelligence is transforming business operations worldwide."
-      },
-      {
-
-        title: "New smartphones launched",
-        desc: "Major brands release flagship devices with advanced features."
-      },
-      {
-
-        title: "Cybersecurity threats rising",
-        desc: "Experts warn about increasing cyber attacks globally."
-      },
-      {
-
-        title: "Startup ecosystem grows",
-        desc: "New tech startups attract heavy investments."
-      },
-      { 
-
-        title: "Cloud adoption increases",
-        desc: "Businesses shift to cloud platforms for scalability."
-      },
-      {
-
-
-        title: "Big tech invests in AI",
-        desc: "Companies invest billions into AI research and development."
-      },
-      {
-
-
-        title: "Electric vehicles rising",
-        desc: "EV adoption accelerates across major economies."
-      },
-      {
-
-        title: "5G expansion continues",
-        desc: "Telecom companies expand 5G networks globally."
-      }
-    ]
-  },
-  {
-    name: "Climate",
-    news: [
-      {
-        title: "Global temperatures rise",
-        desc: "Climate experts report record-breaking heat levels."
-      },
-      {
-        title: "Renewable energy growth",
-        desc: "Solar and wind energy investments are increasing rapidly."
-      },
-      {
-        title: "Extreme weather events",
-        desc: "Floods and heatwaves impact multiple regions worldwide."
-      },
-      {
-        title: "India climate initiatives",
-        desc: "Government launches new sustainability programs."
-      },
-      {
-        title: "Glacier melting concern",
-        desc: "Rapid glacier loss threatens ecosystems."
-      },
-      {
-        title: "Ocean levels rising",
-        desc: "Sea levels continue to rise due to global warming."
-      },
-      {
-        title: "Carbon policies tighten",
-        desc: "Countries introduce stricter emission regulations."
-      },
-      {
-        title: "Green jobs increasing",
-        desc: "Sustainability sector sees major job growth."
-      }
-    ]
-  }
-];
   return (
     <div className="categories-page">
       <h1 className="page-title">Explore News</h1>
 
-      {categories.map((cat, index) => (
-        <div key={index} className="category-section">
+      {/* Stock Market */}
+      <div className="category-section">
+        <h2 id="stock-market" onClick={() => handleClick(0)}>Stock Market</h2>
 
-          <h2
-            className="category-title clickable"
-            onClick={() => handleClick(index)}
-          >
-            {cat.name}
-          </h2>
+        {activeIndexes.includes(0) && (
+          <div className="news-grid">
+            <div className="card"><h3>Sensex hits record high</h3><p>Markets surged due to strong quarterly earnings across sectors.</p></div>
+            <div className="card"><h3>Nifty crosses 20,000 mark</h3><p>Benchmark index reaches new milestone driven by IT stocks.</p></div>
+            <div className="card"><h3>Global markets react to inflation</h3><p>US inflation data impacts trading across global markets.</p></div>
+            <div className="card"><h3>Adani stocks recover</h3><p>Major gains seen after recent losses in Adani group shares.</p></div>
+            <div className="card"><h3>Banking sector leads rally</h3><p>Private banks show strong performance boosting indices.</p></div>
+            <div className="card"><h3>IPO market heats up</h3><p>Several companies plan public offerings this quarter.</p></div>
+            <div className="card"><h3>Rupee weakens</h3><p>Indian currency falls against US dollar amid global pressure.</p></div>
+            <div className="card"><h3>Oil prices impact stocks</h3><p>Rising crude prices influence market sentiment.</p></div>
+          </div>
+        )}
+      </div>
 
-          {activeIndexes.includes(index) && (
-            <div className="news-grid">
-              {cat.news.map((item, i) => (
-                <div key={i} className="card">
-                  <h3>{item.title}</h3>
-                  <p>{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          )}
+      {/* Technology */}
+      <div className="category-section">
+        <h2 id="Technology" onClick={() => handleClick(1)}>Technology</h2>
 
-        </div>
-      ))}
+        {activeIndexes.includes(1) && (
+          <div className="news-grid">
+            <div className="card"><h3>AI reshaping industries</h3><p>Artificial Intelligence is transforming business operations worldwide.</p></div>
+            <div className="card"><h3>New smartphones launched</h3><p>Major brands release flagship devices with advanced features.</p></div>
+            <div className="card"><h3>Cybersecurity threats rising</h3><p>Experts warn about increasing cyber attacks globally.</p></div>
+            <div className="card"><h3>Startup ecosystem grows</h3><p>New tech startups attract heavy investments.</p></div>
+            <div className="card"><h3>Cloud adoption increases</h3><p>Businesses shift to cloud platforms for scalability.</p></div>
+            <div className="card"><h3>Big tech invests in AI</h3><p>Companies invest billions into AI research and development.</p></div>
+            <div className="card"><h3>Electric vehicles rising</h3><p>EV adoption accelerates across major economies.</p></div>
+            <div className="card"><h3>5G expansion continues</h3><p>Telecom companies expand 5G networks globally.</p></div>
+          </div>
+        )}
+      </div>
+
+      {/* Climate */}
+      <div className="category-section">
+        <h2 id="Climate-recs" onClick={() => handleClick(2)}>Climate</h2>
+
+        {activeIndexes.includes(2) && (
+          <div className="news-grid">
+            <div className="card"><h3>Global temperatures rise</h3><p>Climate experts report record-breaking heat levels.</p></div>
+            <div className="card"><h3>Renewable energy growth</h3><p>Solar and wind energy investments are increasing rapidly.</p></div>
+            <div className="card"><h3>Extreme weather events</h3><p>Floods and heatwaves impact multiple regions worldwide.</p></div>
+            <div className="card"><h3>India climate initiatives</h3><p>Government launches new sustainability programs.</p></div>
+            <div className="card"><h3>Glacier melting concern</h3><p>Rapid glacier loss threatens ecosystems.</p></div>
+            <div className="card"><h3>Ocean levels rising</h3><p>Sea levels continue to rise due to global warming.</p></div>
+            <div className="card"><h3>Carbon policies tighten</h3><p>Countries introduce stricter emission regulations.</p></div>
+            <div className="card"><h3>Green jobs increasing</h3><p>Sustainability sector sees major job growth.</p></div>
+          </div>
+        )}
+      </div>
+
     </div>
   );
 }
