@@ -34,7 +34,7 @@ export default function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/subscribe" element={<Subscribe />} />
-          <Route path="/article" element={<ArticleDetails />} />
+          <Route path="/:id" element={<ArticleDetails />} />
           <Route path="/categories/:id" element={<NewsDetail />} />
 
         </Routes>

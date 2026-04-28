@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import newsbanner from "../assests/news1.png";
+import { newsData } from "./newsdata";
+
 export default function Home() {
     const navigate = useNavigate();
 
@@ -25,7 +27,7 @@ export default function Home() {
                     <button
                         className="getmore" id="Market"
                         onClick={() =>
-                            navigate("/article", {
+                            navigate(`${newsData[0].id}`, {
                                 state: {
                                     id: 1,
                                     title: "Global Markets See Major Shift",
@@ -48,7 +50,7 @@ export default function Home() {
                     <button
                         className="getmore" id="Tech"
                         onClick={() =>
-                            navigate("/article", {
+                            navigate(`${newsData[9].id}`, {
                                 state: {
                                     id: 2,
                                     title: "Tech Innovation Trends in 2026",
@@ -71,7 +73,7 @@ export default function Home() {
                     <button
                         className="getmore" id="Climate"
                         onClick={() =>
-                            navigate("/article", {
+                            navigate(`${newsData[17].id}`, {
                                 state: {
                                     id: 3,
                                     title: "Climate Change Updates Today",
